@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "59E9D9701BE32D0F006CA79F"
-               BuildableName = "Sydney&apos;s App.app"
+               BuildableName = "Reasons.app"
                BlueprintName = "Sydney&apos;s App"
                ReferencedContainer = "container:Sydney&apos;s App.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "59E9D9701BE32D0F006CA79F"
-            BuildableName = "Sydney&apos;s App.app"
+            BuildableName = "Reasons.app"
             BlueprintName = "Sydney&apos;s App"
             ReferencedContainer = "container:Sydney&apos;s App.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "59E9D9701BE32D0F006CA79F"
-            BuildableName = "Sydney&apos;s App.app"
+            BuildableName = "Reasons.app"
             BlueprintName = "Sydney&apos;s App"
             ReferencedContainer = "container:Sydney&apos;s App.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "59E9D9701BE32D0F006CA79F"
-            BuildableName = "Sydney&apos;s App.app"
+            BuildableName = "Reasons.app"
             BlueprintName = "Sydney&apos;s App"
             ReferencedContainer = "container:Sydney&apos;s App.xcodeproj">
          </BuildableReference>

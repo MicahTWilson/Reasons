@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Parse.enableLocalDatastore()
+        
+        PFUser.enableAutomaticUser()
+        
+        Parse.setApplicationId("M73Vg7Scza3zACxmYld2hlfw083SyvcuzUkYTQbn", clientKey: "Z3eoysNJQ556BowA8BiEdIrpWq6cKQeovTx7ONBR")
+        
+        let defaultACL = PFACL();
+        
+        // If you would like all objects to be private by default, remove this line.
+        defaultACL.setPublicReadAccess(true)
+        
+        PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser:true)
+        
+        if application.applicationState != UIApplicationState.Background {
+            // Track an app open here if we launch with a push, unless
+            // "content_available" was used to trigger a background push (introduced in iOS 7).
+            // In that case, we skip tracking here to avoid double counting the app-open.
+            
+            let preBackgroundPush = !application.respondsToSelector("backgroundRefreshStatus")
+            let oldPushHandlerOnly = !self.respondsToSelector("application:didReceiveRemoteNotification:fetchCompletionHandler:")
+            var noPushPayload = false;
+            if let options = launchOptions {
+                noPushPayload = options[UIApplicationLaunchOptionsRemoteNotificationKey] != nil;
+            }
+            if (preBackgroundPush || oldPushHandlerOnly || noPushPayload) {
+                PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+            }
+        }
+        
+        let tabBarController = self.window?.rootViewController as! UITabBarController
+        let tabBar = tabBarController.tabBar
+        
+        let reasonsTab = tabBar.items![0]
+        reasonsTab.image = UIImage(named: "HeartIcon")?.imageWithRenderingMode(.AlwaysOriginal)
+        reasonsTab.selectedImage = UIImage(named: "HeartIconSelected")?.imageWithRenderingMode(.AlwaysOriginal)
+        
+        let pathTab = tabBar.items![1]
+        pathTab.image = UIImage(named: "PathIcon")?.imageWithRenderingMode(.AlwaysOriginal)
+        pathTab.selectedImage = UIImage(named: "PathIconSelected")?.imageWithRenderingMode(.AlwaysOriginal)
+        
+        let bucketListTab = tabBar.items![2]
+        bucketListTab.image = UIImage(named: "BucketIcon")?.imageWithRenderingMode(.AlwaysOriginal)
+        bucketListTab.selectedImage = UIImage(named: "BucketIconSelected")?.imageWithRenderingMode(.AlwaysOriginal)
+        
+        let countdownTab = tabBar.items![3]
+        countdownTab.image = UIImage(named: "ClockIcon")?.imageWithRenderingMode(.AlwaysOriginal)
+        countdownTab.selectedImage = UIImage(named: "ClockIconSelected")?.imageWithRenderingMode(.AlwaysOriginal)
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red:0.65, green:0.95, blue:0.95, alpha:1)], forState: .Selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState: .Normal)
+        
         return true
     }
 
