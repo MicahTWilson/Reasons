@@ -23,7 +23,7 @@ class StoryViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize = CGSizeMake(self.view.frame.width, 2000)
+        scrollView.contentSize = CGSizeMake(self.view.frame.width, 4900)
         peakView.hidden = true
         peakView.clipsToBounds = false
         peakView.layer.shadowColor = UIColor.blackColor().CGColor
@@ -104,22 +104,41 @@ class StoryViewController: UIViewController, UIScrollViewDelegate {
 
 extension StoryViewController {
     func getDates() -> [String] {
-        return ["November 19th, 1993","January 25th, 1994","November 24th, 2001","February 2nd, 2002","April 27th, 2013","November 23rd, 2012","June 5th, 2013","January 16th, 2013","December 18th, 2014","December 16th, 2014","February 13th, 2015","February 15th, 2015"]
+        return ["November 19th, 1993","January 25th, 1994","November 24th, 2001","February 2nd, 2002","April 27th, 2013","November 23rd, 2012","June 5th, 2013","January 16th, 2013","December 18th, 2014","December 16th, 2014","February 13th, 2015","February 15th, 2015", "May 14th, 2015", "June 7th, 2015", "June 12th, 2015", "June 12th 2015", "June 13th 2015", "June 13th 2015", "June 26th 2015", "June 28th, 2015", "July 3rd, 2015", "July 4th 2015", "July 21st, 2015", "July 25th, 2015", "August 1st, 2015", "August 10th, 2015", "August 12th, 2015", "September 6th, 2015", "September 17th, 2015", "October 7th, 2015", "November 21st, 2015"]
     }
     
     func getDescriptions() -> [String] {
         return [
-        "Sydney's baby picture.",
-        "Micah's baby picture.",
-        "Sydney's baptism picture.",
-        "Micah's baptism picture.",
-        "Sydney's endowment picture.",
-        "Micah's endowment picture.",
-        "Sydney leaving for her mission in Japan.",
-        "Micah leaving for his mission in California.",
-        "Sydney coming home from her mission in Japan.",
-        "Micah coming home from his mission in California.",
-        "They meet. The first time Sydney and Micah truly meet. A trip to Vegas for the weekend!",
-        "They Flirt. A snapchat from Sydney to Micah."]
+            "Sydney's baby picture.",
+            "Micah's baby picture.",
+            "Sydney's baptism picture.",
+            "Micah's baptism picture.",
+            "Sydney's endowment picture.",
+            "Micah's endowment picture.",
+            "Sydney leaving for her mission in Japan.",
+            "Micah leaving for his mission in California.",
+            "Sydney coming home from her mission in Japan.",
+            "Micah coming home from his mission in California.",
+            "They meet. The first time Sydney and Micah truly meet. A trip to Vegas for the weekend!",
+            "They Flirt. A snapchat from Sydney to Micah.",
+            "Micah goes with Sydney to take blood pressure for her CNA class.",
+            "They Kiss. Micah kisses Sydney on a mountain overlooking Provo.",
+            "They Love. Sydney and Micah take this picture jokingly.",
+            "They Date. Sydney and Micah celebrating Kasandra's wedding.",
+            "Sydney and Micah take a trip to Hannah's cabin for the weekend.",
+            "Micah crashes the four-wheeler into the fence.",
+            "Micah sitting in the big chair in beaver on his way to surprise Sydney in St. George.",
+            "Micah surprises Sydney as she gets home from Japan.",
+            "Sydney and Micah celebrating the 4th of July at Aggie Stadium.",
+            "Nothing like a hamburger for the 4th of July.",
+            "Micah takes a spontaneous trip to St. George with Sydney for a few days.",
+            "Micah asks Sydney to marry him.",
+            "Micah drops his phone off a rollercoaster at Lagoon. :(",
+            "Sydney and Micah take their first roadtrip.",
+            "Sydney and Micah get free Disneyland tickets.",
+            "The first family reunion, in Alta Wyoming.",
+            "Sydney and Micah take their engagement pictures.",
+            "Sydney and Micah take their bridal pictures",
+            "Sydney and Micah are married and sealed for all time and eternity."]
     }
 }

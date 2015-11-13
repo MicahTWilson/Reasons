@@ -30,7 +30,7 @@ class ReasonDetailsViewController: UIViewController, UIScrollViewDelegate {
         
         self.headerBlurView.effect = UIBlurEffect(style: .Light)
         self.headerBlurView.alpha = 0
-        self.scrollView.contentSize = CGSizeMake(self.view.frame.width, 1000)
+        self.scrollView.contentSize = CGSizeMake(self.view.frame.width, 850)
         
         //Set up story field
         storyField.editable = false
